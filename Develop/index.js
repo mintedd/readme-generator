@@ -2,6 +2,7 @@
 // which was npm inquirer 
 const inquirer = require('inquirer');
 const fs = require('fs');
+// const path = require('path');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
@@ -29,7 +30,7 @@ const questions = [{
     type: 'list',
     name: 'license',
     message: 'What kind of license should your project have?',
-    choices: [`MIT`, `Apache_2.0`, `GPL 3.0`, `BSD 3`, `None`]
+    choices: ["MIT", "Apache_2.0", "GPL3.0", "BSD3", "None"]
 },
 {
     type: 'input',
@@ -54,18 +55,20 @@ const questions = [{
 ];
 
 // TODO: Create a function to write README file
-// function writeToFile(data) {
-//     fs.writeFile('README.md', generateMarkdown(data))
-// }
+// function writeToFile(filename, data) {
+//     return fs.writeFile(path.join(process.cwd(),filename), data)
+//  }
 
 // TODO: Create a function to initialize app
 function init() {
     //put everything in the questions array OR put all of the inquirer.prompt directly into init
+    console.log('Please answer the following prompts and your README will be generated')
     inquirer.prompt(questions)
     .then((answers) => {
+        // writeToFile('test-README.md', generateMarkdown(answers))
         const readMe = generateMarkdown(answers);
     
-        fs.writeFile('README.md', readMe, (err) =>
+        fs.writeFile('test-README.md', readMe, (err) =>
           err ? console.log(err) : console.log('Successfully created readMe!')
         );
       });

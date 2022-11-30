@@ -90,6 +90,6 @@ init();
     // BSD 3
     // None
 //What command should be run to install dependencies? npm install
-//What command should be run to run test? -- n,p run test
+//What command should be run to run test? -- npm run test
 //What does user need to know about using the repo? - read the repo
 //What does the user need to know avout contributing to the repo? -ask before 

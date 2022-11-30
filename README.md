@@ -1,5 +1,5 @@
 # readme-generator
-Using your computer terminal, run node on index.js to create a professional README.md from a template for any code project. 
+Using your computer terminal, run node on index.js to create a professional README.md called test-README.md from a template for any code project. 
 
 ## User Story
 ```
@@ -33,4 +33,8 @@ THEN I am taken to the corresponding section of the README
 Here are some guidelines to help you get started:
 *  Need to install node.js 
 
-[recording](https://)
+![recording](https://)
+
+![screenshot](Screen%20Shot%202022-11-29%20at%208.39.32%20PM.png)
+![screenshot](./Screen%20Shot%202022-11-29%20at%208.41.11%20PM.png)
+![screenshot](./Screen%20Shot%202022-11-29%20at%208.42.38%20PM.png)

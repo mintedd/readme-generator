@@ -66,9 +66,8 @@ function init() {
     inquirer.prompt(questions)
     .then((answers) => {
         // writeToFile('test-README.md', generateMarkdown(answers))
-        const readMe = generateMarkdown(answers);
     
-        fs.writeFile('test-README.md', readMe, (err) =>
+        fs.writeFile('test-README.md', generateMarkdown(answers), (err) =>
           err ? console.log(err) : console.log('Successfully created readMe!')
         );
       });
